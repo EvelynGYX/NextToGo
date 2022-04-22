@@ -19,6 +19,10 @@ target 'NextToGo' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+
+
+
+
   target 'NextToGoTests' do
     inherit! :complete
     # Pods for testing
