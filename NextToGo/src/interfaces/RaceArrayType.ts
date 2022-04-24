@@ -1,12 +1,12 @@
 import Category from '../constants/Category';
 
-export type RaceArray = Array<Race>;
+export type RaceArray = Array<IRace>;
 
-export type Race = {
+export interface IRace {
   raceId: string;
   meetingName: string;
   raceNumber: number;
   category: Category;
   advertisedStart: string;
   venueState: string;
-};
+}
