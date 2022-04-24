@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Category from '../constants/Category';
+import Category from '../../constants/Category';
 
 interface RaceItemIconProps {
   category: Category;

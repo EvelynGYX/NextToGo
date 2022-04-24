@@ -1,7 +1,7 @@
+import moment from 'moment';
 import Category from '../constants/Category';
 import {INextRacesAPI} from '../interfaces/NextRaces';
-import {RaceArray} from '../interfaces/RaceArrayType';
-import moment from 'moment';
+import {RaceArray} from '../interfaces/RaceArray';
 
 function formatTimeDiff(seconds: number): string {
   const diff = moment.unix(seconds).diff(moment(), 'seconds');

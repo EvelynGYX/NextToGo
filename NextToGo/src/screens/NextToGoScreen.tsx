@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import {View} from 'react-native';
 import useGetApiRequest, {GetApiRequestProps} from '../apis/getApiRequest';
-import RaceItemList from '../components/RaceItemList';
+import RaceItemList from '../components/raceItemList/RaceItemList';
 import {config} from '../config';
 import Category from '../constants/Category';
-import {convertNextRaces} from '../services/covertNextRaces';
 import {INextRacesAPI} from '../interfaces/NextRaces';
-import {RaceArray} from '../interfaces/RaceArrayType';
+import {RaceArray} from '../interfaces/RaceArray';
+import {convertNextRaces} from '../services/covertNextRaces';
+import ErrorScreen from './ErrorScreen';
 
 const NextToGoScreen = () => {
   const converter = (json: any): RaceArray => {
@@ -18,7 +19,6 @@ const NextToGoScreen = () => {
     converter: converter,
     interval: 1000,
   };
-
   const {result, error} = useGetApiRequest(apiConfig);
   const [horseSelected, setHorseSelected] = useState<boolean>(true);
   const [greyHoundSelected, setGreyHoundSelected] = useState<boolean>(true);
@@ -58,6 +58,10 @@ const NextToGoScreen = () => {
       }
     }
   };
+
+  if (error != null) {
+    return <ErrorScreen />;
+  }
 
   return (
     <View>

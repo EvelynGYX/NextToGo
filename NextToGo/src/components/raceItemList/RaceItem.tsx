@@ -1,10 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {ChevronRight} from '../assets/Chevron';
-import RaceIcon from '../assets/RaceIcon';
-import {Race} from '../interfaces/RaceArrayType';
+import {IRace} from '../../interfaces/RaceArray';
+import {ChevronRightIcon} from '../icons/ChevronIcon';
+import RaceIcon from '../icons/RaceIcon';
 
-interface RaceItemProps extends Race {}
+type RaceItemProps = IRace;
 
 const RaceItem = (props: RaceItemProps) => {
   const {meetingName, venueState, raceNumber, category, advertisedStart} =
@@ -22,7 +22,7 @@ const RaceItem = (props: RaceItemProps) => {
       <View style={styles.rightContent}>
         <Text>{advertisedStart}</Text>
         <View style={styles.rightIcon}>
-          <ChevronRight />
+          <ChevronRightIcon />
         </View>
       </View>
     </View>

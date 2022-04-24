@@ -1,7 +1,7 @@
 import React from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
-import {IFilter} from '../interfaces/Filter';
-import {RaceArray} from '../interfaces/RaceArrayType';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {IFilter} from '../../interfaces/Filter';
+import {RaceArray} from '../../interfaces/RaceArray';
 import RaceItem from './RaceItem';
 import RaceItemListDivider from './RaceItemListDivider';
 import RaceItemListHeader from './RaceItemListHeader';
@@ -11,6 +11,14 @@ interface RaceItemListProps extends IFilter {
 }
 
 const RaceItemList = (props: RaceItemListProps) => {
+  if (props.data.length === 0) {
+    return (
+      <View style={styles.container}>
+        <Text>No race</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.contentWrapper}>
       <FlatList
@@ -27,6 +35,11 @@ const RaceItemList = (props: RaceItemListProps) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   contentWrapper: {
     borderTopWidth: 1,
     borderBottomWidth: 1,

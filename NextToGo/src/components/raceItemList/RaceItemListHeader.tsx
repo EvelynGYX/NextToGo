@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-import RaceIcon from '../assets/RaceIcon';
-import Category from '../constants/Category';
-import {IFilter} from '../interfaces/Filter';
+import Category from '../../constants/Category';
+import {IFilter} from '../../interfaces/Filter';
+import RaceIcon from '../icons/RaceIcon';
 
-interface RaceItemListHeaderProps extends IFilter {}
+type RaceItemListHeaderProps = IFilter;
 
 const RaceItemListHeader = (props: RaceItemListHeaderProps) => {
   const isChecked = (isSelected: boolean): string => {

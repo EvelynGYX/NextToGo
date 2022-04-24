@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {IError} from '../interfaces/NextRaces';
+import {IError} from './ApiInterfaces';
 
 export interface GetApiRequestProps {
   url: string;
@@ -10,30 +10,39 @@ export interface GetApiRequestProps {
 const useGetApiRequest = (
   props: GetApiRequestProps,
 ): {
-  result: any | null;
+  result: any;
   error: IError | null;
 } => {
-  const [result, setResult] = useState<any | null>(null);
-  const [error, setError] = useState<any | null>(null);
+  let interval: NodeJS.Timer;
+  const [isRunning, setIsRunning] = useState<boolean>(true);
+  const [result, setResult] = useState<any>(null);
+  const [error, setError] = useState<any>(null);
 
   useEffect(() => {
-    const interval = setInterval(
-      () =>
-        fetch(props.url)
-          .then(response => response.json())
-          .then(json => {
-            setResult(props.converter(json));
-          })
-          .catch(error => {
-            console.log('Error:' + error);
-            setError(error);
-          }),
-      props.interval,
-    );
+    if (isRunning) {
+      interval = setInterval(
+        () =>
+          fetch(props.url)
+            .then(response => response.json())
+            .then(json => {
+              setResult(props.converter(json));
+              setError(null);
+              setIsRunning(true);
+            })
+            .catch(error => {
+              console.log('Error:' + error);
+              setError(error);
+              setResult(null);
+              setIsRunning(false);
+            }),
+        props.interval,
+      );
+    }
+
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [isRunning]);
 
   return {result, error};
 };

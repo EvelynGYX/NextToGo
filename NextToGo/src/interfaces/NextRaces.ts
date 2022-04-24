@@ -1,14 +1,7 @@
-export interface ICommonAPI {
-  status: number;
-  message: string;
-}
+import {ICommonAPI} from '../apis/ApiInterfaces';
 
 export interface INextRacesAPI extends ICommonAPI {
   data: INextRaces;
-}
-
-export interface IError extends ICommonAPI {
-  data: null;
 }
 
 export interface INextRaces {
