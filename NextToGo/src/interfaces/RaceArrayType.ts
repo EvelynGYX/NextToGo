@@ -1,4 +1,3 @@
-import {RaceItemProps} from '../components/RaceItem';
 import Category from '../constants/Category';
 
 export type RaceArray = Array<Race>;

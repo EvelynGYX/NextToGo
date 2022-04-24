@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import {IError} from '../interfaces/NextRaces';
 
 export interface GetApiRequestProps {
   url: string;
@@ -10,7 +11,7 @@ const useGetApiRequest = (
   props: GetApiRequestProps,
 ): {
   result: any | null;
-  error: any | null;
+  error: IError | null;
 } => {
   const [result, setResult] = useState<any | null>(null);
   const [error, setError] = useState<any | null>(null);
@@ -24,7 +25,7 @@ const useGetApiRequest = (
             setResult(props.converter(json));
           })
           .catch(error => {
-            console.log(error);
+            console.log('Error:' + error);
             setError(error);
           }),
       props.interval,

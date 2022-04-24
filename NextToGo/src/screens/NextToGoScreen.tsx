@@ -6,7 +6,7 @@ import {config} from '../config';
 import Category from '../constants/Category';
 import {convertNextRaces} from '../services/covertNextRaces';
 import {INextRacesAPI} from '../interfaces/NextRaces';
-import {Race, RaceArray} from '../interfaces/RaceArrayType';
+import {RaceArray} from '../interfaces/RaceArrayType';
 
 const NextToGoScreen = () => {
   const converter = (json: any): RaceArray => {
@@ -23,7 +23,6 @@ const NextToGoScreen = () => {
   const [horseSelected, setHorseSelected] = useState<boolean>(true);
   const [greyHoundSelected, setGreyHoundSelected] = useState<boolean>(true);
   const [harnessSelected, setHarnessSelected] = useState<boolean>(true);
-  console.log('yes');
 
   let data: RaceArray;
   if (result != null) {

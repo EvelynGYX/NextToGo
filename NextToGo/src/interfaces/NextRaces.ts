@@ -1,14 +1,18 @@
 export interface ICommonAPI {
   status: number;
+  message: string;
 }
 
 export interface INextRacesAPI extends ICommonAPI {
   data: INextRaces;
-  message: string;
+}
+
+export interface IError extends ICommonAPI {
+  data: null;
 }
 
 export interface INextRaces {
-  next_to_go_ids: Array<string>;
+  next_to_go_ids: string[];
   race_summaries: {
     [id: string]: {
       race_id: string;
