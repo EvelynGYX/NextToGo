@@ -8,7 +8,7 @@ const RaceItemListDivider = () => {
 const styles = StyleSheet.create({
   divider: {
     height: 1,
-    backgroundColor: 'gray',
+    backgroundColor: 'grey',
     marginRight: 4,
   },
 });

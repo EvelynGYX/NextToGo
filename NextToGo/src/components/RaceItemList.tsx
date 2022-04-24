@@ -1,10 +1,10 @@
 import React from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
-import RaceItemListDivider from './RaceItemListDivider';
-import RaceItem from './RaceItem';
-import RaceItemListHeader from './RaceItemListHeader';
+import {FlatList, StyleSheet, View} from 'react-native';
 import {IFilter} from '../interfaces/Filter';
 import {RaceArray} from '../interfaces/RaceArrayType';
+import RaceItem from './RaceItem';
+import RaceItemListDivider from './RaceItemListDivider';
+import RaceItemListHeader from './RaceItemListHeader';
 
 interface RaceItemListProps extends IFilter {
   data: RaceArray;

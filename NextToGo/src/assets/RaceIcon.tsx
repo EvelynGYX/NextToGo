@@ -1,23 +1,24 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleProp, ViewStyle} from 'react-native';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-import Category from '../constants/Category';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Category from '../constants/Category';
 
 interface RaceItemIconProps {
   category: Category;
+  style?: StyleProp<ViewStyle>;
 }
 
 const RaceIcon = (props: RaceItemIconProps) => {
   return (
     <>
       {props.category === Category.Horse ? (
-        <FontAwesome5Icon name="horse-head" size={20} style={styles.icon} />
+        <FontAwesome5Icon name="horse-head" size={20} style={props.style} />
       ) : props.category === Category.Greyhound ? (
-        <FontAwesome5Icon style={styles.icon} name="dog" size={20} />
+        <FontAwesome5Icon style={props.style} name="dog" size={20} />
       ) : (
         <MaterialCommunityIcons
-          style={styles.icon}
+          style={props.style}
           name="horse-human"
           size={20}
         />
@@ -26,9 +27,4 @@ const RaceIcon = (props: RaceItemIconProps) => {
   );
 };
 
-const styles = StyleSheet.create({
-  icon: {
-    paddingRight: 24,
-  },
-});
 export default RaceIcon;

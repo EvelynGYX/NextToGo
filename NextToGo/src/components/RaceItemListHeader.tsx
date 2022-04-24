@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import RaceIcon from '../assets/RaceIcon';
 import Category from '../constants/Category';
 import {IFilter} from '../interfaces/Filter';
 
@@ -21,25 +21,21 @@ const RaceItemListHeader = (props: RaceItemListHeaderProps) => {
         onPress={() => props.onCategorySelected(Category.Horse)}
         size={20}
       />
-      <FontAwesome5Icon style={styles.icon} name="horse-head" size={20} />
+      <RaceIcon category={Category.Horse} style={styles.icon} />
       <FontAwesome5Icon
         style={styles.icon}
         name={isChecked(props.categorySelected.greyHoundSelected)}
         onPress={() => props.onCategorySelected(Category.Greyhound)}
         size={20}
       />
-      <FontAwesome5Icon style={styles.icon} name="dog" size={20} />
+      <RaceIcon category={Category.Greyhound} style={styles.icon} />
       <FontAwesome5Icon
         style={styles.icon}
         name={isChecked(props.categorySelected.harnessSelected)}
         onPress={() => props.onCategorySelected(Category.Harness)}
         size={20}
       />
-      <MaterialCommunityIcons
-        style={styles.icon}
-        name="horse-human"
-        size={20}
-      />
+      <RaceIcon category={Category.Harness} style={styles.icon} />
     </View>
   );
 };
