@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RaceIcon renders correctly with style props if category is Greyhound  1`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 20,
+      },
+      Object {
+        "height": 100,
+      },
+      Object {
+        "fontFamily": "FontAwesome5Free-Solid",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {
+        "fontWeight": "900",
+      },
+    ]
+  }
+>
+  
+</Text>
+`;
+
+exports[`RaceIcon renders correctly with style props if category is Harness  1`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 20,
+      },
+      Object {
+        "height": 100,
+      },
+      Object {
+        "fontFamily": "Material Design Icons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  󱗀
+</Text>
+`;
+
+exports[`RaceIcon renders correctly with style props if category is Horse  1`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 20,
+      },
+      Object {
+        "height": 100,
+      },
+      Object {
+        "fontFamily": "FontAwesome5Free-Solid",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {
+        "fontWeight": "900",
+      },
+    ]
+  }
+>
+  
+</Text>
+`;

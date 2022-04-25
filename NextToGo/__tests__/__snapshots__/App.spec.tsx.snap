@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderColor": "grey",
+        "borderTopWidth": 1,
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignContent": "center",
+          "borderBottomColor": "grey",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 12,
+          "paddingVertical": 16,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          onPress={[Function]}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 8,
+              },
+              Object {
+                "fontFamily": "FontAwesome5Free-Regular",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {
+                "fontWeight": "400",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 8,
+              },
+              Object {
+                "fontFamily": "FontAwesome5Free-Solid",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {
+                "fontWeight": "900",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          onPress={[Function]}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 8,
+              },
+              Object {
+                "fontFamily": "FontAwesome5Free-Regular",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {
+                "fontWeight": "400",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 8,
+              },
+              Object {
+                "fontFamily": "FontAwesome5Free-Solid",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {
+                "fontWeight": "900",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          onPress={[Function]}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 8,
+              },
+              Object {
+                "fontFamily": "FontAwesome5Free-Regular",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {
+                "fontWeight": "400",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 20,
+              },
+              Object {
+                "paddingRight": 8,
+              },
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          󱗀
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text>
+        No race
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

@@ -13,7 +13,7 @@ const RaceIcon = (props: RaceItemIconProps) => {
   return (
     <>
       {props.category === Category.Horse ? (
-        <FontAwesome5Icon name="horse-head" size={20} style={props.style} />
+        <FontAwesome5Icon style={props.style} name="horse-head" size={20} />
       ) : props.category === Category.Greyhound ? (
         <FontAwesome5Icon style={props.style} name="dog" size={20} />
       ) : (

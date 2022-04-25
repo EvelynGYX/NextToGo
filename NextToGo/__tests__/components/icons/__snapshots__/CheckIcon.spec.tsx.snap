@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckIcon renders correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  onPress={[MockFunction]}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 20,
+      },
+      Object {
+        "height": 100,
+      },
+      Object {
+        "fontFamily": "FontAwesome5Free-Regular",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {
+        "fontWeight": "400",
+      },
+    ]
+  }
+>
+  
+</Text>
+`;

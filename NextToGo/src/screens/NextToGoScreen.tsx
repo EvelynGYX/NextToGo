@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
-import useGetApiRequest, {GetApiRequestProps} from '../apis/getApiRequest';
+import useGetApiRequest, {GetApiRequestProps} from '../apis/GetApiRequest';
 import RaceItemList from '../components/raceItemList/RaceItemList';
-import {config} from '../config';
+import {config} from '../Config';
 import Category from '../constants/Category';
 import {INextRacesAPI} from '../interfaces/NextRaces';
 import {RaceArray} from '../interfaces/RaceArray';
-import {convertNextRaces} from '../services/covertNextRaces';
+import {convertNextRaces} from '../services/ConvertNextRaces';
 import ErrorScreen from './ErrorScreen';
 
 const NextToGoScreen = () => {
@@ -64,13 +63,11 @@ const NextToGoScreen = () => {
   }
 
   return (
-    <View>
-      <RaceItemList
-        data={data}
-        categorySelected={categorySelected}
-        onCategorySelected={onCategorySelected}
-      />
-    </View>
+    <RaceItemList
+      data={data}
+      categorySelected={categorySelected}
+      onCategorySelected={onCategorySelected}
+    />
   );
 };
 

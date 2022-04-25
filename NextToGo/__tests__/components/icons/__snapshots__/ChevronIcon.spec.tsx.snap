@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChevronIcon renders correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  selectable={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 18,
+      },
+      undefined,
+      Object {
+        "fontFamily": "Entypo",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;

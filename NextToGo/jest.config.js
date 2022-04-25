@@ -1,5 +1,7 @@
 module.exports = {
   preset: 'react-native',
+  verbose: true,
+  testURL: 'http://localhost/',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
@@ -15,4 +17,6 @@ module.exports = {
   },
   clearMocks: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/node_modules/**'],
+  testRunner: 'jest-jasmine2',
+  setupFilesAfterEnv: ['./setup-tests.js'],
 };

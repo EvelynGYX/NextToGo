@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RaceItemListDivider renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "grey",
+      "height": 1,
+      "marginRight": 4,
+    }
+  }
+/>
+`;

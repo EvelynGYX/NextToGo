@@ -1,0 +1,564 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RaceItemList renders correctly if data prop is empty 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "grey",
+      "borderTopWidth": 1,
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "borderBottomColor": "grey",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingHorizontal": 12,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "paddingRight": 8,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Regular",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "paddingRight": 8,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Solid",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "900",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "paddingRight": 8,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Regular",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "paddingRight": 8,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Solid",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "900",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "paddingRight": 8,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Regular",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 20,
+            },
+            Object {
+              "paddingRight": 8,
+            },
+            Object {
+              "fontFamily": "Material Design Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        󱗀
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text>
+      No race
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`RaceItemList renders correctly if data prop is not empty 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomWidth": 1,
+      "borderColor": "grey",
+      "borderTopWidth": 1,
+    }
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListHeaderComponent={[Function]}
+    data={
+      Array [
+        Object {
+          "advertisedStart": "some advertisedStart",
+          "category": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+          "meetingName": "meeting name",
+          "raceId": "some race id",
+          "raceNumber": "race number",
+          "venueState": "some venueState",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignContent": "center",
+              "borderBottomColor": "grey",
+              "borderBottomWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "paddingHorizontal": 12,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "paddingRight": 8,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Regular",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "400",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "paddingRight": 8,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Solid",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "900",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "paddingRight": 8,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Regular",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "400",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "paddingRight": 8,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Solid",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "900",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "paddingRight": 8,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Regular",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "400",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "paddingRight": 8,
+                  },
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              󱗀
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 12,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 20,
+                  },
+                  Object {
+                    "paddingRight": 24,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Solid",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "900",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                }
+              }
+            >
+              <Text>
+                meeting name Rrace number
+              </Text>
+              <Text>
+                some venueState
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text>
+              some advertisedStart
+            </Text>
+            <View
+              style={
+                Object {
+                  "paddingLeft": 4,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                selectable={false}
+                style={
+                  Array [
+                    Object {
+                      "color": undefined,
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Entypo",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

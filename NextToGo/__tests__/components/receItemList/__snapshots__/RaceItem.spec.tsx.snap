@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RaceItem renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingHorizontal": 12,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 20,
+          },
+          Object {
+            "paddingRight": 24,
+          },
+          Object {
+            "fontFamily": "Material Design Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      󱗀
+    </Text>
+    <View
+      style={
+        Object {
+          "flexDirection": "column",
+        }
+      }
+    >
+      <Text>
+        some meetingName Rsome number
+      </Text>
+      <Text>
+        some venueState
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text>
+      some advertisedStart
+    </Text>
+    <View
+      style={
+        Object {
+          "paddingLeft": 4,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 18,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Entypo",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -4,7 +4,7 @@ import {IRace} from '../../interfaces/RaceArray';
 import {ChevronRightIcon} from '../icons/ChevronIcon';
 import RaceIcon from '../icons/RaceIcon';
 
-type RaceItemProps = IRace;
+export type RaceItemProps = IRace;
 
 const RaceItem = (props: RaceItemProps) => {
   const {meetingName, venueState, raceNumber, category, advertisedStart} =

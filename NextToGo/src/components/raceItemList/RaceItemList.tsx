@@ -6,7 +6,7 @@ import RaceItem from './RaceItem';
 import RaceItemListDivider from './RaceItemListDivider';
 import RaceItemListHeader from './RaceItemListHeader';
 
-interface RaceItemListProps extends IFilter {
+export interface RaceItemListProps extends IFilter {
   data: RaceArray;
 }
 
@@ -14,7 +14,10 @@ const RaceItemList = (props: RaceItemListProps) => {
   if (props.data.length === 0) {
     return (
       <View style={styles.container}>
-        <Text>No race</Text>
+        <RaceItemListHeader {...(props as IFilter)} />
+        <View style={styles.textContainer}>
+          <Text>No race</Text>
+        </View>
       </View>
     );
   }
@@ -36,14 +39,20 @@ const RaceItemList = (props: RaceItemListProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
+    borderTopWidth: 1,
+    borderColor: 'grey',
   },
   contentWrapper: {
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderColor: 'grey',
+  },
+  textContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

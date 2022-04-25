@@ -1,48 +1,53 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import Category from '../../constants/Category';
 import {IFilter} from '../../interfaces/Filter';
+import CheckIcon, {CheckIconProps} from '../icons/CheckIcon';
 import RaceIcon from '../icons/RaceIcon';
 
-type RaceItemListHeaderProps = IFilter;
+export type RaceItemListHeaderProps = IFilter;
+
+interface IHeaderConfig extends CheckIconProps {
+  category: Category;
+}
 
 const RaceItemListHeader = (props: RaceItemListHeaderProps) => {
-  const isChecked = (isSelected: boolean): string => {
-    if (isSelected) return 'check-circle';
-    else return 'circle';
-  };
+  const headerConfigs: IHeaderConfig[] = [
+    {
+      isChecked: props.categorySelected.horseSelected,
+      onPress: () => props.onCategorySelected(Category.Horse),
+      category: Category.Horse,
+    },
+    {
+      isChecked: props.categorySelected.greyHoundSelected,
+      onPress: () => props.onCategorySelected(Category.Greyhound),
+      category: Category.Greyhound,
+    },
+    {
+      isChecked: props.categorySelected.harnessSelected,
+      onPress: () => props.onCategorySelected(Category.Harness),
+      category: Category.Harness,
+    },
+  ];
 
   return (
     <View style={styles.container}>
-      <FontAwesome5Icon
-        style={styles.icon}
-        name={isChecked(props.categorySelected.horseSelected)}
-        onPress={() => props.onCategorySelected(Category.Horse)}
-        size={20}
-      />
-      <RaceIcon category={Category.Horse} style={styles.icon} />
-      <FontAwesome5Icon
-        style={styles.icon}
-        name={isChecked(props.categorySelected.greyHoundSelected)}
-        onPress={() => props.onCategorySelected(Category.Greyhound)}
-        size={20}
-      />
-      <RaceIcon category={Category.Greyhound} style={styles.icon} />
-      <FontAwesome5Icon
-        style={styles.icon}
-        name={isChecked(props.categorySelected.harnessSelected)}
-        onPress={() => props.onCategorySelected(Category.Harness)}
-        size={20}
-      />
-      <RaceIcon category={Category.Harness} style={styles.icon} />
+      {headerConfigs.map((config, index) => (
+        <View style={styles.content} key={index}>
+          <CheckIcon
+            isChecked={config.isChecked}
+            onPress={config.onPress}
+            style={styles.icon}
+          />
+          <RaceIcon category={config.category} style={styles.icon} />
+        </View>
+      ))}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'flex-start',
@@ -50,6 +55,9 @@ const styles = StyleSheet.create({
     borderBottomColor: 'grey',
     paddingHorizontal: 12,
     paddingVertical: 16,
+  },
+  content: {
+    flexDirection: 'row',
   },
   icon: {
     paddingRight: 8,

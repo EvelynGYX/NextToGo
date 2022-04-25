@@ -7,7 +7,7 @@ export interface GetApiRequestProps {
   interval: number;
 }
 
-const useGetApiRequest = (
+export const useGetApiRequest = (
   props: GetApiRequestProps,
 ): {
   result: any;
