@@ -1,7 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
-import {act} from '@testing-library/react-native';
-import useGetApiRequest, {
+import {
   GetApiRequestProps,
+  useGetApiRequest,
 } from '../../src/apis/GetApiRequest';
 import Category from '../../src/constants/Category';
 import {INextRaces, INextRacesAPI} from '../../src/interfaces/NextRaces';
@@ -134,14 +134,14 @@ describe('useGetApiRequest', () => {
   };
 
   describe('fetches url', () => {
-    it('sets interval when mounting', () => {
+    beforeEach(() => {
       mockSuccesfulResponse(200, mockResult);
-
-      const {result} = act(() => {
-        renderHook(() => {
-          useGetApiRequest(propsMock);
-        });
+    });
+    it('sets interval when mounting', () => {
+      renderHook(() => {
+        useGetApiRequest(propsMock);
       });
+
       setIntervalMock.mock.calls[0][0]();
 
       expect(setIntervalMock).toHaveBeenCalledWith(jasmine.anything(), 1);

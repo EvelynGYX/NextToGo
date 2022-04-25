@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import useGetApiRequest, {GetApiRequestProps} from '../apis/GetApiRequest';
+import {GetApiRequestProps, useGetApiRequest} from '../apis/GetApiRequest';
 import RaceItemList from '../components/raceItemList/RaceItemList';
 import {config} from '../Config';
 import Category from '../constants/Category';

@@ -46,5 +46,3 @@ export const useGetApiRequest = (
 
   return {result, error};
 };
-
-export default useGetApiRequest;
