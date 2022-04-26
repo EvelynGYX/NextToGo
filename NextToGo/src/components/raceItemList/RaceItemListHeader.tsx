@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RaceItemListHeader;
+export default React.memo(RaceItemListHeader);

@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme';
 import React from 'react';
 import {IError} from '../../src/apis/ApiInterfaces';
-import * as GetApiRequestHook from '../../src/apis/GetApiRequest';
+import * as GetApiRequestHook from '../../src/apis/GetApiRequestHook';
 import RaceItemList from '../../src/components/raceItemList/RaceItemList';
 import Category from '../../src/constants/Category';
 import ErrorScreen from '../../src/screens/ErrorScreen';
@@ -24,6 +24,7 @@ describe('NextToGoScreen', () => {
     useGetApiRequestMock.mockImplementation(() => ({
       result: null,
       error: 'any error' as any as IError,
+      loading: 'some loading' as any as boolean,
     }));
 
     const wrapper = shallow(<NextToGoScreen />);
@@ -34,9 +35,13 @@ describe('NextToGoScreen', () => {
     useGetApiRequestMock.mockImplementation(() => ({
       result: [race],
       error: null,
+      loading: 'some loading' as any as boolean,
     }));
 
     const wrapper = shallow(<NextToGoScreen />);
-    expect(wrapper.find(RaceItemList)).toExist();
+    const raceItemList = wrapper.find(RaceItemList);
+    expect(raceItemList).toExist();
+    expect(raceItemList.props().loading).toEqual('some loading');
+    expect(raceItemList.props().data).toEqual([race]);
   });
 });

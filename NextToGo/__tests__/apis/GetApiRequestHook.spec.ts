@@ -2,7 +2,7 @@ import {renderHook} from '@testing-library/react-hooks';
 import {
   GetApiRequestProps,
   useGetApiRequest,
-} from '../../src/apis/GetApiRequest';
+} from '../../src/apis/GetApiRequestHook';
 import Category from '../../src/constants/Category';
 import {INextRaces, INextRacesAPI} from '../../src/interfaces/NextRaces';
 

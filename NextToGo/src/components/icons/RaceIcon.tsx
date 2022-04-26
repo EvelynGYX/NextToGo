@@ -27,4 +27,4 @@ const RaceIcon = (props: RaceItemIconProps) => {
   );
 };
 
-export default RaceIcon;
+export default React.memo(RaceIcon);

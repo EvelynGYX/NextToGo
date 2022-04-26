@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {GetApiRequestProps, useGetApiRequest} from '../apis/GetApiRequest';
+import {GetApiRequestProps, useGetApiRequest} from '../apis/GetApiRequestHook';
 import RaceItemList from '../components/raceItemList/RaceItemList';
 import {config} from '../Config';
 import Category from '../constants/Category';
@@ -18,7 +18,7 @@ const NextToGoScreen = () => {
     converter: converter,
     interval: 1000,
   };
-  const {result, error} = useGetApiRequest(apiConfig);
+  const {result, error, loading} = useGetApiRequest(apiConfig);
   const [horseSelected, setHorseSelected] = useState<boolean>(true);
   const [greyHoundSelected, setGreyHoundSelected] = useState<boolean>(true);
   const [harnessSelected, setHarnessSelected] = useState<boolean>(true);
@@ -67,6 +67,7 @@ const NextToGoScreen = () => {
       data={data}
       categorySelected={categorySelected}
       onCategorySelected={onCategorySelected}
+      loading={loading}
     />
   );
 };

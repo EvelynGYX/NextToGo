@@ -23,4 +23,4 @@ const CheckIcon = (props: CheckIconProps) => {
   );
 };
 
-export default CheckIcon;
+export default React.memo(CheckIcon);

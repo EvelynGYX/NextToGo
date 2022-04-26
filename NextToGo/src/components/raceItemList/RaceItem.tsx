@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RaceItem;
+export default React.memo(RaceItem);

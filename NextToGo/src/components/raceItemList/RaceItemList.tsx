@@ -2,22 +2,28 @@ import React from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {IFilter} from '../../interfaces/Filter';
 import {RaceArray} from '../../interfaces/RaceArray';
+import LoadingScreen from '../../screens/LoadingScreen';
 import RaceItem from './RaceItem';
 import RaceItemListDivider from './RaceItemListDivider';
 import RaceItemListHeader from './RaceItemListHeader';
 
 export interface RaceItemListProps extends IFilter {
   data: RaceArray;
+  loading: boolean;
 }
 
 const RaceItemList = (props: RaceItemListProps) => {
-  if (props.data.length === 0) {
+  if (props.loading || props.data.length === 0) {
     return (
       <View style={styles.container}>
         <RaceItemListHeader {...(props as IFilter)} />
-        <View style={styles.textContainer}>
-          <Text>No race</Text>
-        </View>
+        {props.loading ? (
+          <LoadingScreen />
+        ) : (
+          <View style={styles.textContainer}>
+            <Text>No race</Text>
+          </View>
+        )}
       </View>
     );
   }
@@ -56,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RaceItemList;
+export default React.memo(RaceItemList);
