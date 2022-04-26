@@ -17,7 +17,7 @@ https://user-images.githubusercontent.com/38874012/165308511-7953686d-f3b6-4512-
 * Android
   * JDK 11 or newer
   * Android 11 (R) - Android SDK Platform 30 && Intel x86 Atom_64 System Image or Google APIs Intel x86 Atom System Image
-Simply follow along https://reactnative.dev/docs/environment-setup
+Simply follow along https://reactnative.dev/docs/environment-setup, which means the app was created using `npx react-native init`
 
 ## Env Setup
 1. Run `git clone https://github.com/EvelynGYX/NextToGo.git` to clone this repo to your local
@@ -41,3 +41,4 @@ Run `npm run lint`
 
 ## TroubleShooting
 1. Please ensure you try running the correct emulator or simulator first if the build is failed for some reasons.
+
