@@ -10,9 +10,13 @@ export interface CheckIconProps {
 
 const CheckIcon = (props: CheckIconProps) => {
   const isChecked = (isSelected: boolean): string => {
-    if (isSelected) return 'check-circle';
-    else return 'circle';
+    if (isSelected) {
+      return 'check-circle';
+    } else {
+      return 'circle';
+    }
   };
+
   return (
     <FontAwesome5Icon
       style={props.style}

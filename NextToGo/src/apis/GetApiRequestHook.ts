@@ -4,7 +4,7 @@ import {IError} from './ApiInterfaces';
 export interface GetApiRequestProps {
   url: string;
   converter: (json: any) => void;
-  interval: number;
+  intervalInMS: number;
 }
 
 export const useGetApiRequest = (
@@ -14,13 +14,13 @@ export const useGetApiRequest = (
   error: IError | null;
   loading: boolean;
 } => {
-  let interval: NodeJS.Timer;
   const [isRunning, setIsRunning] = useState<boolean>(true);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    let interval: NodeJS.Timer;
     if (isRunning) {
       setLoading(true);
       interval = setInterval(
@@ -33,14 +33,14 @@ export const useGetApiRequest = (
               setLoading(false);
               setIsRunning(true);
             })
-            .catch(error => {
-              console.log('Error:' + error);
-              setError(error);
+            .catch(err => {
+              console.log('Error:' + err);
+              setError(err);
               setResult(null);
               setLoading(false);
               setIsRunning(false);
             }),
-        props.interval,
+        props.intervalInMS,
       );
     }
 

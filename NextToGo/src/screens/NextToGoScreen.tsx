@@ -16,7 +16,7 @@ const NextToGoScreen = () => {
   const apiConfig: GetApiRequestProps = {
     url: config.racingURL,
     converter: converter,
-    interval: 1000,
+    intervalInMS: 1000,
   };
   const {result, error, loading} = useGetApiRequest(apiConfig);
   const [horseSelected, setHorseSelected] = useState<boolean>(true);
