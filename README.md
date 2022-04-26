@@ -38,3 +38,6 @@ Run `npm run test`
 
 ## ESLint
 Run `npm run lint`
+
+## TroubleShooting
+1. Please ensure you try running the correct emulator or simulator first if the build is failed for some reasons.
